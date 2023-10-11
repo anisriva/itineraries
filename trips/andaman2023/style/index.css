@@ -164,44 +164,6 @@ a:hover {
     text-decoration: underline;
 }
 
-@media print {
-    
-    * {
-        text-shadow: none;
-    }
-
-    body {
-        background-image: url('../assets/background.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-    }
-    a[href] {
-        font-size: 0;  /* hides the original text */
-        display: inline-block; /* to give the pseudo-element a size */
-    }
-    
-    a[href]:before {
-        content: attr(href);
-        font-size: 16px;  /* resets the font size for the URL */
-    }
-    
-    
-    body {
-        color: #333;
-    }
-    strong {
-        color: #111;
-    }
-    td.link-cell {
-        width: 200px;
-        white-space: normal;
-        word-wrap: break-word; /* Older browsers */
-        word-break: break-all;
-        overflow-wrap: break-word; /* Modern browsers */
-    }
-    
-    
+@page {
+    margin: 0;
 }
